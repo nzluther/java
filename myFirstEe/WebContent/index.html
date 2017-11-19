@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Number addition made easy</title>
+</head>
+
+<body>
+
+
+       <script language="Javascript">
+
+            function IsEmptyForm0(){ 
+            	            	
+                if(document.forms[0]["f1"].value == null || document.forms[0]["f1"].value == "")
+                {
+                    alert("Please input 1st number");
+                    return false;
+                }
+                
+                if(document.forms[0]["f2"].value == null || document.forms[0]["f2"].value == "")
+                {
+                    alert("Please input 2nd number");
+                    return false;
+                }
+                
+                                
+            }
+            
+            
+            function IsEmptyForm1(){ 
+            	               
+                if(document.forms[1]["f1"].value == null || document.forms[1]["f1"].value == "")
+                {
+                    alert("Please input first number");
+                    return false;
+                }
+                
+                if(document.forms[1]["f2"].value == null || document.forms[1]["f2"].value == "")
+                {
+                    alert("Please input second number");
+                    return false;
+                }
+                
+            }
+
+        </script>
+
+
+<form method="get" onsubmit="return IsEmptyForm0()" action="myFirstServlet" >
+   <br>
+      Input first number: <input type="text" name="f1"> 
+   <br>
+      Input second number: <input type="text" name="f2">
+   <br>
+   <input type="submit" value="Add Please">
+</form>
+
+
+<form method="get" onsubmit="return IsEmptyForm1()" action="subtract" >
+   <br>
+      Input first number: <input type="text" name="f1"> 
+   <br>
+      Input second number: <input type="text" name="f2">
+   <br>
+   <input type="submit" value="Subtract Please">
+</form>
+
+</body>
+
+</html>
