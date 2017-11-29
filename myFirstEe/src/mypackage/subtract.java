@@ -14,6 +14,48 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/subtract")
 public class subtract extends HttpServlet {
+	/**
+	 * Servlet implementation class subtract
+	 */
+	@WebServlet("/dosubtract")
+	public class dosubtract extends HttpServlet {
+		private static final long serialVersionUID = 1L;
+	
+	    /**
+	     * Default constructor. 
+	     */
+	    public dosubtract() {
+	        // TODO Auto-generated constructor stub
+	    }
+	
+		/**
+		 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+		 */
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			// TODO Auto-generated method stub
+			
+			int a = Integer.parseInt(request.getParameter("f1"));
+			int b = Integer.parseInt(request.getParameter("f2"));
+			
+			
+			PrintWriter out = response.getWriter();
+			
+			out.println("Result is ");
+			out.print (a-b);
+			
+			//response.getWriter().append("Served at: ").append(request.getContextPath()).append("\n Happy Learning");
+		}
+	
+		/**
+		 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+		 */
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			// TODO Auto-generated method stub
+			doGet(request, response);
+		}
+	
+	}
+
 	private static final long serialVersionUID = 1L;
 
     /**
